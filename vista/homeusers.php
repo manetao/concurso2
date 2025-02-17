@@ -9,6 +9,37 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* Estilo para el botón de Cerrar Sesión */
+        .btn-logout {
+            background-color: #dc3545;
+            color: white;
+            border: 1px solid #dc3545;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            /* Alineación de texto e ícono */
+            gap: 8px;
+            /* Espacio entre el ícono y el texto */
+        }
+
+        .btn-logout:hover {
+            background-color: white;
+            color: #dc3545;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            /* Sombra en hover */
+            transform: translateY(-3px);
+            /* Efecto hover */
+            transition: all 0.3s ease;
+            /* Transición suave */
+        }
+
+        .btn-logout i {
+            font-size: 1.2rem;
+            /* Tamaño del ícono */
+        }
+
         .card-custom {
             margin-bottom: 20px;
             border-radius: 8px;
@@ -118,7 +149,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <!-- Logo del Panel de Administración -->
-            <a class="navbar-brand" href="admin-dashboard.php">
+            <a class="navbar-brand" href="homeusers.php">
                 <img src="https://previews.123rf.com/images/simoniya/simoniya1803/simoniya180300005/96717043-un-logotipo-para-la-cl%C3%ADnica-empresa-farmac%C3%A9utica-logotipo-del-m%C3%A9dico-de-familia-primeros-auxilios.jpg" alt="Logo">
             </a>
 
@@ -137,17 +168,20 @@
 
                     <!-- Enlace a la Gestión de Citas -->
                     <li class="nav-item">
-                        <a class="nav-link" href="citas.php">Citas</a>
+                        <a class="nav-link" href="login.php">Citas</a>
                     </li>
 
-                    <!-- Enlace para Cerrar Sesión -->
+                    <!-- Enlace para Cerrar Sesión con ícono -->
                     <li class="nav-item">
-                        <a class="nav-link btn-logout" href="logout.php">Cerrar Sesión</a>
+                        <a class="nav-link btn-logout" href="login.php">
+                            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
 
 
     <!-- Contenido principal -->
@@ -163,7 +197,7 @@
                         <i class="fas fa-user-md card-icon"></i>
                         <h5 class="card-title">Médicos Especializados</h5>
                         <p>Contamos con médicos de diferentes especialidades para brindarte la mejor atención.</p>
-                        <a href="/vista/especialidades.php" class="btn btn-primary">Ver Especialidades</a>
+                        <a href="especialidades.php" class="btn btn-primary">Ver Especialidades</a>
                     </div>
                 </div>
             </div>

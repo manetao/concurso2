@@ -118,7 +118,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <!-- Logo del Panel de Administración -->
-            <a class="navbar-brand" href="admin-dashboard.php">
+            <a class="navbar-brand" href="homeadmin.php">
                 <img src="https://previews.123rf.com/images/simoniya/simoniya1803/simoniya180300005/96717043-un-logotipo-para-la-cl%C3%ADnica-empresa-farmac%C3%A9utica-logotipo-del-m%C3%A9dico-de-familia-primeros-auxilios.jpg" alt="Logo">
             </a>
 
@@ -135,14 +135,17 @@
                         <a class="nav-link" href="homeadmin.php">Inicio</a>
                     </li>
 
-                    <!-- Enlace para Cerrar Sesión -->
+                    <!-- Enlace para Cerrar Sesión con ícono -->
                     <li class="nav-item">
-                        <a class="nav-link btn-logout" href="logout.php">Cerrar Sesión</a>
+                        <a class="nav-link btn-logout" href="logout.php">
+                            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
 
 
     <!-- Contenido principal -->
