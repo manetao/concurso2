@@ -175,7 +175,7 @@
                         <i class="fas fa-clinic-medical card-icon"></i>
                         <h5 class="card-title">Salas de Consulta</h5>
                         <p>Tenemos 5 salas de consulta disponibles para atenderte rápidamente.</p>
-                        <a href="salas-consulta.php" class="btn btn-primary">Ver Disponibilidad</a>
+                        <a href="users_dates.php" class="btn btn-primary">Ver Disponibilidad</a>
                     </div>
                 </div>
             </div>

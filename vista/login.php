@@ -24,7 +24,7 @@
                         <div class="col-md-7">
                             <div class="card-body">
                                 <h3 class="card-title text-center mb-4">Iniciar sesión</h3>
-                                <form action="LoginController.php?action=login" method="POST">
+                                <form action="../controller/LoginController.php" method="POST">
                                     <!-- Cédula -->
                                     <div class="mb-3">
                                         <label for="cedula" class="form-label">Cédula</label>

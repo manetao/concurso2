@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center" style="height: 100vh;">
@@ -24,7 +23,7 @@
                         <div class="col-md-7">
                             <div class="card-body">
                                 <h3 class="card-title text-center mb-4">Registrarse</h3>
-                                <form action="RegisterController.php?action=register" method="POST">
+                                <form action="../controller/RegisterController.php?action=register" method="POST">
                                     <!-- Nombre -->
                                     <div class="mb-3">
                                         <label for="nombre" class="form-label">Nombre</label>
