@@ -1,0 +1,67 @@
+        /* Personalización de las tarjetas */
+        .card-custom {
+            margin-bottom: 20px;
+            height: 300px;
+            /* Fija la altura para que todas las tarjetas tengan el mismo tamaño */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Personalización de los íconos dentro de las tarjetas */
+        .card-icon {
+            font-size: 50px;
+            color: white;
+        }
+
+        /* Colores personalizados para cada tarjeta */
+        .card-agendar-cita {
+            background-color: #007bff;
+            /* Azul */
+            color: white;
+        }
+
+        .card-medicos {
+            background-color: #28a745;
+            /* Verde */
+            color: white;
+        }
+
+        .card-salas-consulta {
+            background-color: #ffc107;
+            /* Amarillo */
+            color: white;
+        }
+
+        .card-salas-espera {
+            background-color: #dc3545;
+            /* Rojo */
+            color: white;
+        }
+
+        .card-admision {
+            background-color: #17a2b8;
+            /* Cian */
+            color: white;
+        }
+
+        .card-gestion {
+            background-color: #6f42c1;
+            /* Púrpura */
+            color: white;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: #007bff;
+            border: 1px solid #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #007bff;
+            color: white;
+        }
