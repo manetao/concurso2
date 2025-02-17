@@ -9,33 +9,106 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        .card-custom {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
         /* Estilos para la barra de navegación */
         .navbar {
-            background-color: #007bff;
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+            /* Fondo degradado atractivo */
+            border-radius: 0 0 15px 15px;
+            /* Bordes redondeados en la parte inferior */
         }
 
         .navbar-brand img {
             height: 40px;
-            /* Controlamos el tamaño del logo */
+            /* Ajustar tamaño del logo */
+            margin-right: 15px;
         }
 
         .navbar-nav .nav-item .nav-link {
             color: white !important;
+            font-size: 1.1rem;
+            font-weight: 500;
         }
 
         .navbar-nav .nav-item .nav-link:hover {
             color: #ffc107 !important;
+            transform: translateY(-3px);
+            /* Efecto hover para los enlaces */
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+            /* Cambiar color del icono del menú */
         }
 
         .btn-logout {
             background-color: #dc3545;
             color: white;
             border: 1px solid #dc3545;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
         }
 
         .btn-logout:hover {
             background-color: white;
             color: #dc3545;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            /* Sombra en hover */
+        }
+
+        /* Estilos adicionales para las cards */
+        .card-custom {
+            border: 1px solid #007bff;
+            /* Borde de las tarjetas */
+            border-radius: 10px;
+            /* Bordes redondeados */
+            background-color: #f2f7ff;
+            /* Fondo de color suave */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Transición */
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+            /* Efecto al pasar el mouse */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: #007bff;
+            /* Color para el ícono */
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 2rem;
+            /* Espaciado dentro de las tarjetas */
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
         }
     </style>
 </head>
@@ -44,18 +117,30 @@
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">
+            <!-- Logo del Panel de Administración -->
+            <a class="navbar-brand" href="admin-dashboard.php">
                 <img src="https://previews.123rf.com/images/simoniya/simoniya1803/simoniya180300005/96717043-un-logotipo-para-la-cl%C3%ADnica-empresa-farmac%C3%A9utica-logotipo-del-m%C3%A9dico-de-familia-primeros-auxilios.jpg" alt="Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+            <!-- Botón para el menú en dispositivos móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+
+            <!-- Menú de navegación -->
+            <div class="collapse navbar-collapse" id="navbarAdmin">
                 <ul class="navbar-nav ms-auto">
+
                     <li class="nav-item">
-                        <a class="nav-link" href="agendar-cita.php">Agendar Cita</a>
+                        <a class="nav-link" href="homeusers.php">Inicio</a>
                     </li>
-                    <!-- Aquí el botón de cerrar sesión -->
+
+                    <!-- Enlace a la Gestión de Citas -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="citas.php">Citas</a>
+                    </li>
+
+                    <!-- Enlace para Cerrar Sesión -->
                     <li class="nav-item">
                         <a class="nav-link btn-logout" href="logout.php">Cerrar Sesión</a>
                     </li>
@@ -64,22 +149,12 @@
         </div>
     </nav>
 
-    <!-- El contenido de la página -->
+
+    <!-- Contenido principal -->
     <div class="container-fluid mt-5">
         <h2 class="text-center mb-5">Bienvenido al Sistema de Agendamiento de Citas Médicas</h2>
 
         <div class="row">
-            <!-- Agendar Citas -->
-            <div class="col-md-4">
-                <div class="card card-custom">
-                    <div class="card-body">
-                        <i class="fas fa-calendar-check card-icon"></i>
-                        <h5 class="card-title">Agendar Cita</h5>
-                        <p>Agenda tu cita médica de forma rápida y sencilla.</p>
-                        <a href="agendar-cita.php" class="btn btn-primary">Agendar Cita</a>
-                    </div>
-                </div>
-            </div>
 
             <!-- Médicos Especializados -->
             <div class="col-md-4">
@@ -88,7 +163,7 @@
                         <i class="fas fa-user-md card-icon"></i>
                         <h5 class="card-title">Médicos Especializados</h5>
                         <p>Contamos con médicos de diferentes especialidades para brindarte la mejor atención.</p>
-                        <a href="especialidades.php" class="btn btn-primary">Ver Especialidades</a>
+                        <a href="/vista/especialidades.php" class="btn btn-primary">Ver Especialidades</a>
                     </div>
                 </div>
             </div>
@@ -119,32 +194,33 @@
         </div>
 
         <div class="row">
-            <!-- Área de Admisión y Registro -->
+
+            <!-- Áreas -->
             <div class="col-md-4">
-                <div class="card card-custom">
+                <div class="card card-custom" style="border: 2px solid #007BFF; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
                     <div class="card-body">
-                        <i class="fas fa-hospital-user card-icon"></i>
-                        <h5 class="card-title">Área de Admisión y Registro</h5>
-                        <p>En este área podrás registrarte y acceder a todos nuestros servicios.</p>
-                        <a href="registro.php" class="btn btn-primary">Registrar Nueva Cita</a>
+                        <i class="fas fa-hospital card-icon" style="font-size: 30px;"></i>
+                        <h5 class="card-title">Áreas</h5>
+                        <p>Gestiona las áreas del hospital o clínica.</p>
+                        <a href="areas.php" class="btn btn-primary">Ver Áreas</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Área de Gestión y Administración -->
+            <!-- Citas -->
             <div class="col-md-4">
-                <div class="card card-custom">
+                <div class="card card-custom" style="border: 2px solid #007BFF; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
                     <div class="card-body">
-                        <i class="fas fa-cogs card-icon"></i>
-                        <h5 class="card-title">Área de Gestión y Administración</h5>
-                        <p>Accede a funciones de gestión y administración de citas y horarios.</p>
-                        <a href="gestion.php" class="btn btn-primary">Administrar Citas</a>
+                        <i class="fas fa-calendar-alt card-icon" style="font-size: 30px;"></i>
+                        <h5 class="card-title">Citas</h5>
+                        <p>Gestiona las citas médicas programadas.</p>
+                        <a href="citas.php" class="btn btn-primary">Ver Citas</a>
                     </div>
                 </div>
             </div>
-
 
         </div>
+
     </div>
 
     <!-- Bootstrap JS -->
