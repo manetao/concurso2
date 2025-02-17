@@ -168,7 +168,7 @@
 
                     <!-- Enlace a la Gestión de Citas -->
                     <li class="nav-item">
-                        <a class="nav-link" href="login.php">Citas</a>
+                        <a class="nav-link" href="users_dates.php">Agendar Cita</a>
                     </li>
 
                     <!-- Enlace para Cerrar Sesión con ícono -->

@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_SESSION['cedula_usuario'] = $usuario['cedula_usuario'];
 
     // Redirigir a la página principal o al panel de usuario
-    header("Location: ../homeusers.php");
+    header("Location: ../vista/homeusers.php");
     exit;
 }
 
